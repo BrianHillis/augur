@@ -1,10 +1,9 @@
  <template>
 
-  
-    
-
   <div class="is-table-container">
-    <augur-header></augur-header>
+    <div class="fullwidth">
+      <augur-header></augur-header>
+    </div>
     <section>
     <h3>CHAOSS Metrics Implementation Status</h3>
 
@@ -117,7 +116,7 @@
 import AugurHeader from './AugurHeader'
 export default {
 
-  name: 'AllMetricsStatusCard',
+  name: 'MetricsStatus',
   components: {
     AugurHeader
   },
