@@ -2,14 +2,13 @@
 
 ## Deployment Environment
 
-[Link to your deployment environment](http://seangoggins.ddns.net:3333)
+[Link to your deployment environment]: http://ec2-3-17-10-157.us-east-2.compute.amazonaws.com:3333/
 
 ## Functional Requirements
 
-1. Use Case Name A
-	- Functional Requirement 1
-	- Functional Requirement 2
-	- ... etc.
+1. Home Page Redesign Use Case
+	- Modify the layout of the homepage to display more than 4 projects 
+		- List projects with a number of repos statistic 
 2. Use Case Name B		
 	- Functional Requirement 1
 	- Functional Requirement 2
@@ -20,56 +19,38 @@
 
 ### ERD
 
-![ERD](./images/erd.png)
+
 
 ### DDL 
 
-```SQL
+% Total repo count. 
+select sum(repos_count) from 
+(select a.`name`, count(*) as repos_count 
+from projects a, repos b
+where a.id = b.projects_id
+group by a.id
+order by a.`name`) a
 
-    CREATE TABLE "contributor_affiliations" (
-    "ght_cntrb_id" int4 NOT NULL,
-    "ca_id" int4 NOT NULL,
-    "ca_domain" varchar(64) NOT NULL,
-    "ca_affiliation" varchar(64) NOT NULL,
-    "ca_start_date" date NOT NULL DEFAULT '\'1970-01-01\'',
-    "ca_active" int2 NOT NULL DEFAULT 1,
-    "ca_last_modified" timestamp(0) NOT NULL DEFAULT 'current_timestamp(6)',
-    PRIMARY KEY ("ca_id", "ght_cntrb_id") 
-    )
-    WITHOUT OIDS;
-    CREATE UNIQUE INDEX "domain,affiliation,start_date" ON "contributor_affiliations" ("ca_domain" ASC, "ca_affiliation" ASC, "ca_start_date" ASC);
-    CREATE INDEX "domain,active" ON "contributor_affiliations" ("ca_domain" ASC, "ca_active" ASC);
-
-    CREATE TABLE "contributors_aliases" (
-    "ght_cntrb_id" int4 NOT NULL,
-    "cntrb_a_id" int4 NOT NULL,
-    "cntrb_canonical" varchar(128) NOT NULL,
-    "cntrb_alias" varchar(128) NOT NULL,
-    "cntrb_active" int2 NOT NULL DEFAULT 1,
-    "cntrb_last_modified" timestamp(0) NOT NULL DEFAULT 'current_timestamp(6)',
-    PRIMARY KEY ("ght_cntrb_id", "cntrb_a_id") 
-    )
-    WITHOUT OIDS;
-    CREATE UNIQUE INDEX "canonical,alias" ON "contributors_aliases" ("cntrb_canonical" ASC, "cntrb_alias" ASC);
-    CREATE INDEX "alias,active" ON "contributors_aliases" ("cntrb_alias" ASC, "cntrb_active" ASC);
-    COMMENT ON TABLE "contributors_aliases" IS 'An alias will need to be created for every contributor in this model, otherwise we will have to look in 2 places. ';
-
-%% ETC
-```
+% Just the projects and number of repos
+select a.`name`, count(*) as repos_count 
+from projects a, repos b
+where a.id = b.projects_id
+group by a.id
+order by a.`name`
 
 ## Files that are stubbed out in your repository, with comments about the use cases they are connected to. These sections may not all exist for the Zephyr project teams. Simply explain them as best you can. 
 
 ### User Interface Files
 
-1. first one
-2. second one
+1. frontend/app/styles/ghdata.style 
+2. frontend/app/components/DownloadedReposCard.vue
 3. etc.
 
 
 ### Model Files (Database Access)
 
-1. first one
-2. second one
+1. augur/datasources/ghtorrent/ghtorrent.py
+2. augur/datasources/ghtorrent/routes.py
 3. etc
 
 
@@ -81,11 +62,11 @@
 
 ## Describe languages you need to use, and any gaps in skills on your team. 
 
-1. first language 
-    - how you will use examples or learn what you need
-2. second language 
-    - how you will use examples or learn what you need
+1. Javascript 
+	- Brian has some experience with JS but none with vue or any JS on the level of this project. Need to use JS to display the number of repos in each project.  
+2. MYSQL
+	- Needed to pull the data about number of repos and name of the projects. MYSQL needed for the first use case was provided by professor Goggins
 3. Skill gaps, if any, otherwise specify who is doing what
-    - name
-    - name
-    - skill gap 
+    - Brian is not familiar with python, or vue JS. He also has no experience with a project of this scale. 
+    - 
+    -  
