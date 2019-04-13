@@ -9,6 +9,9 @@
 1. Home Page Redesign Use Case
 	- Modify the layout of the homepage to display more than 4 projects 
 		- List projects with a number of repos statistic 
+		- Need to modify the CSS file to allow projects to overflow in the pane 
+		- Edit the DownloadedReposCard to display the number of repos in each project 
+		- 
 2. Use Case Name B		
 	- Functional Requirement 1
 	- Functional Requirement 2
