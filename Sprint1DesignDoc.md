@@ -1,22 +1,31 @@
-Sprint 1 Design Document Template
-Deployment Environment
-Link to your deployment environment
+# Sprint 1 Design Document Template
 
-Functional Requirements
-Use Case Name A
-Functional Requirement 1
-Functional Requirement 2
-... etc.
-Use Case Name B
-Functional Requirement 1
-Functional Requirement 2
-... etc.
-... etc.
-Database Design
-ERD
-ERD
+## Deployment Environment
 
-DDL
+[Link to your deployment environment](http://seangoggins.ddns.net:3333)
+
+## Functional Requirements
+
+1. Use Case Name A
+	- Functional Requirement 1
+	- Functional Requirement 2
+	- ... etc.
+2. Use Case Name B		
+	- Functional Requirement 1
+	- Functional Requirement 2
+	- ... etc.
+3. ... etc. 
+
+## Database Design
+
+### ERD
+
+![ERD](./images/erd.png)
+
+### DDL 
+
+```SQL
+
     CREATE TABLE "contributor_affiliations" (
     "ght_cntrb_id" int4 NOT NULL,
     "ca_id" int4 NOT NULL,
@@ -46,25 +55,37 @@ DDL
     COMMENT ON TABLE "contributors_aliases" IS 'An alias will need to be created for every contributor in this model, otherwise we will have to look in 2 places. ';
 
 %% ETC
-Files that are stubbed out in your repository, with comments about the use cases they are connected to. These sections may not all exist for the Zephyr project teams. Simply explain them as best you can.
-User Interface Files
-first one
-second one
-etc.
-Model Files (Database Access)
-first one
-second one
-etc
-Controller Files (API or other)
-first one
-second one
-etc.
-Describe languages you need to use, and any gaps in skills on your team.
-first language
-how you will use examples or learn what you need
-second language
-how you will use examples or learn what you need
-Skill gaps, if any, otherwise specify who is doing what
-name
-name
-skill gap
+```
+
+## Files that are stubbed out in your repository, with comments about the use cases they are connected to. These sections may not all exist for the Zephyr project teams. Simply explain them as best you can. 
+
+### User Interface Files
+
+1. first one
+2. second one
+3. etc.
+
+
+### Model Files (Database Access)
+
+1. first one
+2. second one
+3. etc
+
+
+### Controller Files (API or other)
+
+1. first one 
+2. second one
+3. etc. 
+
+## Describe languages you need to use, and any gaps in skills on your team. 
+
+1. first language 
+    - how you will use examples or learn what you need
+2. second language 
+    - how you will use examples or learn what you need
+3. Skill gaps, if any, otherwise specify who is doing what
+    - name
+    - name
+    - skill gap 
