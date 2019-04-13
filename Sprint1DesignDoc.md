@@ -23,13 +23,13 @@
 
 ### DDL 
 
-% Total repo count. 
-select sum(repos_count) from 
-(select a.`name`, count(*) as repos_count 
-from projects a, repos b
-where a.id = b.projects_id
-group by a.id
-order by a.`name`) a
+% Total repo count.\  
+select sum(repos_count) from\
+(select a.`name`, count(*) as repos_count\
+from projects a, repos b\
+where a.id = b.projects_id\
+group by a.id\
+order by a.`name`) a\
 
 % Just the projects and number of repos 
 select a.`name`, count(*) as repos_count 
