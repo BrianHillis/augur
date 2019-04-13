@@ -12,7 +12,7 @@
             <thead class="repo-link-table repo-link-table-body">
               <tr>
                 <th>URL</th>
-                <th>Status</th> <!- change this to display the number of repos -->
+                <th>Status</th> <!-- change this to display the number of repos -->
               </tr>
             </thead>
             <tbody class="repo-link-table repo-link-table-body">
@@ -20,7 +20,7 @@
                 <td><!-- <router-link :to="'git/' + (repo.url).slice(11)" @click.prevent="onGitRepo(repo)" class="repolink fade">{{ repo.url }}</router-link> --><!-- <a :href="'?git=' + btoa(repo.url)" class="repolink fade">{{ repo.url }}</a> -->
                   <a href="#" @click="onGitRepo(repo)">{{ repo.url }}</a>
                 </td>
-                <td>{{ repo.status }}</td> <!- change this to display number of repos in the project -->
+                <td>{{ repo.status }}</td> <!-- change this to display number of repos in the project -->
               </tr>
             </tbody>
           </table>

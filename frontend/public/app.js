@@ -1425,7 +1425,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-1825962d", __vue__options__)
   } else {
-    hotAPI.reload("data-v-1825962d", __vue__options__)
+    hotAPI.rerender("data-v-1825962d", __vue__options__)
   }
 })()}
 });
@@ -3451,7 +3451,9 @@ exports.default = {
                 "field": "date",
                 "type": "temporal",
                 "axis": {
-                  "labels": !this.showDetail
+                  "labels": this.showDetail,
+                  "format": "%b %Y",
+                  "title": " "
                 }
               },
               "color": {

@@ -1,0 +1,12 @@
+sending SIGTERM to node (Brunch) at PID 8888; bash: line 0: kill: (8888) - No such process
+sending SIGTERM to python (Gunicorn) at PID 8867; bash: line 0: kill: (8867) - No such process
+
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         8975 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        8954 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
