@@ -70,6 +70,6 @@ order by a.`name`
 2. MYSQL
 	- Needed to pull the data about number of repos and name of the projects. MYSQL needed for the first use case was provided by professor Goggins
 3. Skill gaps, if any, otherwise specify who is doing what
-    - Brian is not familiar with python, or vue JS. He also has no experience with a project of this scale. 
+    - Brian is not familiar with python, or vue JS. He also has no experience with a project of this scale. In order to implement the Home Page Redesign, Brian will use other vue cards as examples when trying to redesign the home page. Being active in the slack channel and attending the hack space provided by Professor Goggins have also been very useful.  
     - 
     -  
