@@ -24,7 +24,7 @@ http://ec2-3-17-10-157.us-east-2.compute.amazonaws.com:3333/
 
 ### ERD
 
-
+![ERD](https://github.com/BrianHillis/augur/blob/master/Screen%20Shot%202019-04-14%20at%205.07.19%20PM.png)
 
 ### DDL 
 
