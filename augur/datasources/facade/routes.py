@@ -68,9 +68,9 @@ def create_routes(server):
     server.addGitMetric(facade.lines_changed_by_author, 'changes_by_author')
 
 
-    """
-    Stub to add a route to get number of repos in a project 
-    """
+    #"""
+    #Stub to add a route to get number of repos in a project 
+    #"""
 
 
 
