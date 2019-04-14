@@ -12,10 +12,12 @@ http://ec2-3-17-10-157.us-east-2.compute.amazonaws.com:3333/
 		- Need to modify the CSS file to allow projects to overflow in the pane 
 		- Edit the DownloadedReposCard to display the number of repos in each project 
 		- 
-2. Use Case Name B		
-	- Functional Requirement 1
-	- Functional Requirement 2
-	- ... etc.
+2. Home Page Search Function Use Case		
+	- Add a Search function on the homepage so that users can search for the specific projects they want
+		- Add Search bar and Search button for the homepage
+		- Modify the CSSfile to allow homepage to display the search bar and button
+		- Add search function to DownloadedReposCard to return certain projects only contains key words
+
 3. ... etc. 
 
 ## Database Design
@@ -67,9 +69,10 @@ order by a.`name`
 
 1. Javascript 
 	- Brian has some experience with JS but none with vue or any JS on the level of this project. Need to use JS to display the number of repos in each project.  
+	- Weiwei has some experience with html and JS but none with vue. Need to add search bar and button,parse the projects array and return certain results using JS.
 2. MYSQL
 	- Needed to pull the data about number of repos and name of the projects. MYSQL needed for the first use case was provided by professor Goggins
 3. Skill gaps, if any, otherwise specify who is doing what
     - Brian is not familiar with python, or vue JS. He also has no experience with a project of this scale. In order to implement the Home Page Redesign, Brian will use other vue cards as examples when trying to redesign the home page. Being active in the slack channel and attending the hack space provided by Professor Goggins have also been very useful.  
-    - 
+    - Weiwei is not familiar with vue JS. She will try to learn some vue knowledge online and do some test experiments. Meanwhile she can use some resource provided by classmates and Professor Goggins in class or slack.
     -  
