@@ -56,6 +56,16 @@ class Facade(object):
     ###         EXPERIMENTAL          ###
     #####################################
 
+   @annotate(tag='repos-count')
+    def repos_count(self, project_id):
+        """
+        This stub will return the number of repositories in a given project
+        :param project_id: the project's ID
+        """
+    
+        return 1;
+
+
     @annotate(tag='downloaded-repos')
     def downloaded_repos(self):
         """
