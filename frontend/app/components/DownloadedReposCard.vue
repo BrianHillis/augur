@@ -2,6 +2,18 @@
   <!-- <div class="row section collapsible collapsed"> -->
 <section class="unmaterialized">
   <h3>Downloaded Git Repos by Project</h3>
+
+  <!--Add Search bar and Search button next to head 
+  <div class="...">
+      <form action="" class="...">
+          <input type="text" class="search" placeholder="Search">
+          <input type="button" name="" id="" class="">
+      </form>
+  </div>
+
+  -->
+
+
   <div class="row section">
     <hr>
     <div style=" margin-left: 42.4%" class="col col-12 relative spinner loader"></div>
@@ -87,6 +99,15 @@ module.exports = {
         this.projects = Object.keys(this.repos)
       })
     },
+
+
+    /* Add Search Function to parse the projects array and return projects contains key words 
+    getSearchResults(){
+    ...
+    }
+    */
+    
+
     btoa(s) {
       return window.btoa(s)
     }
