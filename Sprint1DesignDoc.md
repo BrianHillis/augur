@@ -52,8 +52,8 @@ order by a.`name`
 
 ### Model Files (Database Access)
 
-1. augur/datasources/ghtorrent/ghtorrent.py
-2. augur/datasources/ghtorrent/routes.py
+1. augur/datasources/facade/facade.py
+2. augur/datasources/facade/routes.py
 3. etc
 
 
