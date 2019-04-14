@@ -2,7 +2,7 @@
 
 ## Deployment Environment
 
-[Link to your deployment environment]:http://ec2-3-17-10-157.us-east-2.compute.amazonaws.com:3333/
+http://ec2-3-17-10-157.us-east-2.compute.amazonaws.com:3333/
 
 ## Functional Requirements
 
