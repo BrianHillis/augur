@@ -12,6 +12,19 @@
   </div>
 
   -->
+  <!--Add sort dropdown and "Sort" button under search form
+  <div class="sortForm">
+  	<form action="handleSort()">
+  		<select id="sortSelect">
+		  <option value="atoz">A to Z</option>
+		  <option value="ztoa">Z to A</option>
+		  <option value="totalcommits">Total Commits</option>
+		  ETC...
+		</select>
+		<input type="button" name="Sort" id="sortButton">
+  	</form>
+  </div>
+  -->
 
 
   <div class="row section">
@@ -103,6 +116,13 @@ module.exports = {
 
     /* Add Search Function to parse the projects array and return projects contains key words 
     getSearchResults(){
+    ...
+    }
+    */
+
+    /* Add sort function to reorder displayed repos based on user-selected criteria
+    sortRepos()
+    {
     ...
     }
     */
