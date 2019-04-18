@@ -2572,6 +2572,13 @@ header .search {
   width: 100%;
   margin-top: 25px;
 }
+.sortform {
+  width: 100%;
+  margin-top: 25px;
+}
+.sortform form {
+  margin: 0 auto;
+}
 .header-nav {
   margin-top: 25px;
   display: block;
@@ -2728,7 +2735,7 @@ section.status {
   transform: translateY(-26px);
 }
 .section {
-  overflow: hidden;
+  overflow: scroll;
   transition: max-height 0.3s ease-out;
   height: auto;
   max-height: 600px;
