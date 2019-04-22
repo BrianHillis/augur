@@ -47,7 +47,8 @@
             <thead class="repo-link-table repo-link-table-body">
               <tr>
                 <th>URL</th>
-                <th>Status</th> <!-- change this to display the number of repos -->
+		<th>Status</th>
+                <th>Number of repos: {{ repos[project].length }}</th> <!-- change this to display the number of repos -->
               </tr>
             </thead>
             <tbody class="repo-link-table repo-link-table-body">
@@ -134,6 +135,14 @@ module.exports = {
     sortRepos()
     {
     ...
+    }
+    */
+
+    /* Add function to get number of repos in a project
+    getReposCount(){
+      var count;
+      for(object in repos){
+	count = object.length;
     }
     */
 

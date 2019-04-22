@@ -247,3 +247,36 @@ Monitor both:  make monitor
 Restart and monitor: make dev
 Restart servers:  make dev-start 
 Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 9629; bash: line 0: kill: (9629) - No such process
+sending SIGTERM to python (Gunicorn) at PID 9608; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         9813 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        9792 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 9813; bash: line 0: kill: (9813) - No such process
+sending SIGTERM to python (Gunicorn) at PID 9792; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         9899 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        9878 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 9899; bash: line 0: kill: (9899) - No such process
+sending SIGTERM to python (Gunicorn) at PID 9878; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         10040 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        10019 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
