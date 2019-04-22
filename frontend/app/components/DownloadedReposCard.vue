@@ -57,7 +57,8 @@
                   <a href="#" @click="onGitRepo(repo)">{{ repo.url }}</a>
                 </td>
                 <td>{{ repo.status }}</td> <!-- change this to display number of repos in the project -->
-	      </tr>
+	        <td></td>
+	       </tr>
             </tbody>
           </table>
         </div>
