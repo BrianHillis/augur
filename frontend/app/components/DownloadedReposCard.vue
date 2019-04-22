@@ -4,10 +4,10 @@
   <h3>Downloaded Git Repos by Project</h3>
 
   <!--Add Search bar and Search button next to head 
-  <div class="...">
+  <div class="searchform">
       <form action="" class="...">
           <input type="text" class="search" placeholder="Search">
-          <input type="button" name="" id="" class="">
+          <input type="button" name="Search" id="searchbutton" class="">
       </form>
   </div>
 
@@ -25,6 +25,16 @@
   	</form>
   </div>
   -->
+  <div id="example">
+    <input type="text" v-model="searchData" placeholder="Please put your key word here">
+    <ul>
+      <li v-for="(item,index) in Newitems" :key="index">
+        <span>{{item.id}}</span>
+        <span>{{item.name}}</span>
+        <span>{{item.time}}</span>
+      </li>
+    </ul>
+  </div>
 
 
   <div class="row section">
@@ -135,6 +145,40 @@ module.exports = {
   mounted() {
     this.getDownloadedRepos()
   } 
+};
+
+
+export default {
+  name: "HelloWorld",
+  data() {
+    return {
+      searchData: "",
+      items: [
+        { id: "1001", name: "哈哈", time: "20170207" },
+        { id: "1002", name: "呵呵", time: "20170213" },
+        { id: "1103", name: "晓丽", time: "20170304" },
+        { id: "1104", name: "小兰", time: "20170112" },
+        { id: "1205", name: "财务", time: "20170203" },
+        { id: "1206", name: "嘻嘻", time: "20170208" },
+        { id: "1307", name: "测试", time: "20170201" }
+      ]
+    };
+  },
+  computed: {
+    Newitems() {
+      var _this = this;
+      var Newitems = [];
+      _this.items.map(function(item) {
+        if (
+          item.id.search(_this.searchData) != -1 ||
+          item.name.search(_this.searchData) != -1
+        ) {
+          Newitems.push(item);
+        }
+      });
+      return Newitems;
+    }
+  }
 };
 
 </script>
