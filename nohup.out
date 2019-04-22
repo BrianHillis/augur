@@ -55,3 +55,195 @@ Monitor both:  make monitor
 Restart and monitor: make dev
 Restart servers:  make dev-start 
 Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 28172; sending SIGTERM to python (Gunicorn) at PID 28140; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         6592 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        6571 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 6592; sending SIGTERM to python (Gunicorn) at PID 6571; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         6702 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        6681 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 6702; bash: line 0: kill: (6702) - No such process
+sending SIGTERM to python (Gunicorn) at PID 6681; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         7549 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        7528 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 7549; bash: line 0: kill: (7549) - No such process
+sending SIGTERM to python (Gunicorn) at PID 7528; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         7816 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        7795 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 7816; sending SIGTERM to python (Gunicorn) at PID 7795; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         7935 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        7914 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 7935; bash: line 0: kill: (7935) - No such process
+sending SIGTERM to python (Gunicorn) at PID 7914; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         8085 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        8064 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 8085; bash: line 0: kill: (8085) - No such process
+sending SIGTERM to python (Gunicorn) at PID 8064; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         8196 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        8175 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 8196; bash: line 0: kill: (8196) - No such process
+sending SIGTERM to python (Gunicorn) at PID 8175; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         8307 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        8286 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 8307; bash: line 0: kill: (8307) - No such process
+sending SIGTERM to python (Gunicorn) at PID 8286; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         8428 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        8407 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 8428; bash: line 0: kill: (8428) - No such process
+sending SIGTERM to python (Gunicorn) at PID 8407; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         8515 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        8494 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 8515; bash: line 0: kill: (8515) - No such process
+sending SIGTERM to python (Gunicorn) at PID 8494; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         8628 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        8607 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         8724 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        8702 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         8991 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        8970 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 8991; bash: line 0: kill: (8991) - No such process
+sending SIGTERM to python (Gunicorn) at PID 8970; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         9137 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        9116 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 9137; bash: line 0: kill: (9137) - No such process
+sending SIGTERM to python (Gunicorn) at PID 9116; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         9264 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        9243 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 9264; bash: line 0: kill: (9264) - No such process
+sending SIGTERM to python (Gunicorn) at PID 9243; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         9405 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        9384 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 9405; bash: line 0: kill: (9405) - No such process
+sending SIGTERM to python (Gunicorn) at PID 9384; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         9518 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        9497 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 9518; sending SIGTERM to python (Gunicorn) at PID 9497; 
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         9629 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        9608 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 

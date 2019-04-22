@@ -56,7 +56,7 @@
                   <a href="#" @click="onGitRepo(repo)">{{ repo.url }}</a>
                 </td>
                 <td>{{ repo.status }}</td> <!-- change this to display number of repos in the project -->
-              </tr>
+	      </tr>
             </tbody>
           </table>
         </div>
@@ -136,7 +136,6 @@ module.exports = {
     ...
     }
     */
-    
 
     btoa(s) {
       return window.btoa(s)

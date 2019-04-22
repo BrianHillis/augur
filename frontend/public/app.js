@@ -1344,6 +1344,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 ;(function(){
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+
 module.exports = {
   data: function data() {
     return {
@@ -1394,14 +1399,14 @@ module.exports = {
       });
     },
     getDownloadedRepos: function getDownloadedRepos() {
-      var _this = this;
+      var _this2 = this;
 
       this.downloadedRepos = [];
       window.AugurAPI.getDownloadedGitRepos().then(function (data) {
-        $(_this.$el).find('.spinner').removeClass('loader');
-        $(_this.$el).find('.spinner').removeClass('relative');
-        _this.repos = window._.groupBy(data, 'project_name');
-        _this.projects = Object.keys(_this.repos);
+        $(_this2.$el).find('.spinner').removeClass('loader');
+        $(_this2.$el).find('.spinner').removeClass('relative');
+        _this2.repos = window._.groupBy(data, 'project_name');
+        _this2.projects = Object.keys(_this2.repos);
       });
     },
     btoa: function btoa(s) {
@@ -1412,11 +1417,34 @@ module.exports = {
     this.getDownloadedRepos();
   }
 };
+
+exports.default = {
+  name: "HelloWorld",
+  data: function data() {
+    return {
+      searchData: "",
+      items: [{ id: "1001", name: "哈哈", time: "20170207" }, { id: "1002", name: "呵呵", time: "20170213" }, { id: "1103", name: "晓丽", time: "20170304" }, { id: "1104", name: "小兰", time: "20170112" }, { id: "1205", name: "财务", time: "20170203" }, { id: "1206", name: "嘻嘻", time: "20170208" }, { id: "1307", name: "测试", time: "20170201" }]
+    };
+  },
+
+  computed: {
+    Newitems: function Newitems() {
+      var _this = this;
+      var Newitems = [];
+      _this.items.map(function (item) {
+        if (item.id.search(_this.searchData) != -1 || item.name.search(_this.searchData) != -1) {
+          Newitems.push(item);
+        }
+      });
+      return Newitems;
+    }
+  }
+};
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"unmaterialized"},[_c('h3',[_vm._v("Downloaded Git Repos by Project")]),_vm._v(" "),_c('div',{staticClass:"row section"},[_c('hr'),_vm._v(" "),_c('div',{staticClass:"col col-12 relative spinner loader",staticStyle:{"margin-left":"42.4%"}}),_vm._v(" "),_vm._l((_vm.projects),function(project){return _c('div',{staticClass:"col-6"},[_c('h4',[_vm._v(_vm._s(project))]),_vm._v(" "),_c('div',{staticClass:"repo-link-holder"},[_c('table',{staticClass:"is-responsive"},[_vm._m(0,true),_vm._v(" "),_c('tbody',{staticClass:"repo-link-table repo-link-table-body"},_vm._l((_vm.repos[project]),function(repo){return _c('tr',[_c('td',[_c('a',{attrs:{"href":"#"},on:{"click":function($event){_vm.onGitRepo(repo)}}},[_vm._v(_vm._s(repo.url))])]),_vm._v(" "),_c('td',[_vm._v(_vm._s(repo.status))])])}))])])])})],2)])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"unmaterialized"},[_c('h3',[_vm._v("Downloaded Git Repos by Project")]),_vm._v(" "),_c('div',{attrs:{"id":"example"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchData),expression:"searchData"}],attrs:{"type":"text","placeholder":"Please put your key word here"},domProps:{"value":(_vm.searchData)},on:{"input":function($event){if($event.target.composing){ return; }_vm.searchData=$event.target.value}}}),_vm._v(" "),_c('ul',_vm._l((_vm.Newitems),function(item,index){return _c('li',{key:index},[_c('span',[_vm._v(_vm._s(item.id))]),_vm._v(" "),_c('span',[_vm._v(_vm._s(item.name))]),_vm._v(" "),_c('span',[_vm._v(_vm._s(item.time))])])}))]),_vm._v(" "),_c('div',{staticClass:"row section"},[_c('hr'),_vm._v(" "),_c('div',{staticClass:"col col-12 relative spinner loader",staticStyle:{"margin-left":"42.4%"}}),_vm._v(" "),_vm._l((_vm.projects),function(project){return _c('div',{staticClass:"col-6"},[_c('h4',[_vm._v(_vm._s(project))]),_vm._v(" "),_c('div',{staticClass:"repo-link-holder"},[_c('table',{staticClass:"is-responsive"},[_vm._m(0,true),_vm._v(" "),_c('tbody',{staticClass:"repo-link-table repo-link-table-body"},_vm._l((_vm.repos[project]),function(repo){return _c('tr',[_c('td',[_c('a',{attrs:{"href":"#"},on:{"click":function($event){_vm.onGitRepo(repo)}}},[_vm._v(_vm._s(repo.url))])]),_vm._v(" "),_c('td',[_vm._v(_vm._s(repo.status))])])}))])])])})],2)])}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',{staticClass:"repo-link-table repo-link-table-body"},[_c('tr',[_c('th',[_vm._v("URL")]),_vm._v(" "),_c('th',[_vm._v("Status")])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -1425,7 +1453,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-1825962d", __vue__options__)
   } else {
-    hotAPI.reload("data-v-1825962d", __vue__options__)
+    hotAPI.rerender("data-v-1825962d", __vue__options__)
   }
 })()}
 });
