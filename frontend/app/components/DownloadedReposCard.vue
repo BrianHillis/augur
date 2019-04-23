@@ -142,7 +142,20 @@ module.exports = {
 
     /* Add Search Function to parse the projects array and return projects contains key words 
     getSearchRe(){
-    	
+    var searchItem = document.getElementById("search").value;
+    searchItem.onclick = getSearchResults;
+    	methods:{
+    search(){
+        this.projectslist=[];
+        for(let i=0;i<this.newlist.length;i++){
+            //if not contain key word, then return -1
+            if(this.projectlist[i].value.indexOf(this.searchval)>=0){
+                this.projectslist.push(this.projectlist[i]);
+            }         
+        }
+        return this.projectslist;    
+    },    
+
     },*/
     
     
@@ -171,13 +184,13 @@ export default {
     return {
       searchData: "",
       items: [
-        { id: "1001", name: "哈哈", time: "20170207" },
-        { id: "1002", name: "呵呵", time: "20170213" },
-        { id: "1103", name: "晓丽", time: "20170304" },
-        { id: "1104", name: "小兰", time: "20170112" },
-        { id: "1205", name: "财务", time: "20170203" },
-        { id: "1206", name: "嘻嘻", time: "20170208" },
-        { id: "1307", name: "测试", time: "20170201" }
+        { id: "1001", name: "amy", time: "20170207" },
+        { id: "1002", name: "kate", time: "20170213" },
+        { id: "1103", name: "shell", time: "20170304" },
+        { id: "1104", name: "lan", time: "20170112" },
+        { id: "1205", name: "xixi", time: "20170203" },
+        { id: "1206", name: "test", time: "20170208" }
+    
       ]
     };
   },
