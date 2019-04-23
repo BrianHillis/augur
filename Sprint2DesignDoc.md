@@ -43,4 +43,35 @@ Use case 2: Sorting the cards on the home page
 
         - This use case did not require database access, as it relied solely on the arrays made available through Vue.js for sorting
 
-Use case 3:
+Use case 3:Searching the cards on the home page
+
+System Requirements
+
+    - This use case requires accessing the array of projects and directly manipulating the HTML DOM
+
+    - Additionally, this use case requires searching through all projects and return projects whose name contain key words.At last we need to re-arrange of the home page
+
+Design Decisions
+
+    - I chose to use <input> element to create the search bar.And I wrote a command to get the key word.
+`var searchItem = document.getElementById("search").value;` once users key in some words, we can trigger the searching query like this: `searchItem.onclick = getSearchResults;`
+
+    - I am still working on how to get a full array of projects' names from the HTML.After that I am going to finish search function like this:
+
+methods:{
+    search(){
+        this.projectslist=[];
+        for(let i=0;i<this.newlist.length;i++){
+            //if not contain key word, then return -1
+            if(this.projectlist[i].value.indexOf(this.searchval)>=0){
+                this.projectslist.push(this.projectlist[i]);
+            }         
+        }
+        return this.projectslist;    
+    },    
+
+
+Database Usage
+
+    - This use case did not require database access, as it relied solely on the arrays made available through Vue.js for searching.
+
