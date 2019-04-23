@@ -124,7 +124,20 @@ module.exports = {
 
 	/*Add sort function to sort listed repos*/
 	sort() {
-		alert("hello");
+		var selectList=document.getElementById('sortSelect');
+		var selectedOption=selectList.options[selectList.selectedIndex];
+		if(selectedOption.value=='atoz')
+		{
+			var sortedProjects=this.$data.projects.sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+});
+		}
+		else if(selectedOption.value=='ztoa')
+		{
+			var sortedProjects=this.$data.projects.sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+}).reverse();
+		}
 	},
 
     /* Add Search Function to parse the projects array and return projects contains key words 
@@ -184,11 +197,5 @@ export default {
     }
   }
 };
-
-    /* Add sort function to reorder displayed repos based on user-selected criteria
-    sortRepos()
-    {
-    	
-    }*/
 
 </script>
