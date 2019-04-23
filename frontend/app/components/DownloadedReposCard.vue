@@ -10,22 +10,19 @@
           <input type="button" name="Search" id="searchbutton" class="">
       </form>
   </div>
+-->
 
-  -->
-  <!--Add sort dropdown and "Sort" button under search form
+  <!--Add sort dropdown and "Sort" button under search form-->
   <div class="sortForm">
-  	<form action="handleSort()">
   		<select id="sortSelect">
 		  <option value="atoz">A to Z</option>
 		  <option value="ztoa">Z to A</option>
 		  <option value="totalcommits">Total Commits</option>
-		  ETC...
 		</select>
-		<input type="button" name="Sort" id="sortButton">
-  	</form>
+		<button @click="sort">Sort</button>
   </div>
-  -->
-  <div id="example">
+
+  <!--<div id="example">
     <input type="text" v-model="searchData" placeholder="Please put your key word here">
     <ul>
       <li v-for="(item,index) in Newitems" :key="index">
@@ -34,14 +31,14 @@
         <span>{{item.time}}</span>
       </li>
     </ul>
-  </div>
+  </div>-->
 
 
   <div class="row section">
     <hr>
     <div style=" margin-left: 42.4%" class="col col-12 relative spinner loader"></div>
     <div v-for="project in projects" class="col-6">
-      <h4>{{ project }}</h4>
+      <h4 class="repoTitle">{{ project }}</h4>
         <div class="repo-link-holder">
           <table class="is-responsive">
             <thead class="repo-link-table repo-link-table-body">
@@ -125,19 +122,17 @@ module.exports = {
       })
     },
 
+	/*Add sort function to sort listed repos*/
+	sort() {
+		alert("hello");
+	},
 
     /* Add Search Function to parse the projects array and return projects contains key words 
-    getSearchResults(){
-    ...
-    }
-    */
-
-    /* Add sort function to reorder displayed repos based on user-selected criteria
-    sortRepos()
-    {
-    ...
-    }
-    */
+    getSearchRe(){
+    	
+    },*/
+    
+    
 
     /* Add function to get number of repos in a project
     getReposCount(){
@@ -189,5 +184,11 @@ export default {
     }
   }
 };
+
+    /* Add sort function to reorder displayed repos based on user-selected criteria
+    sortRepos()
+    {
+    	
+    }*/
 
 </script>
