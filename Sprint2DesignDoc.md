@@ -1,3 +1,8 @@
+Design Document
+
+
+
+
 Link to our EC2 instance:
 http://ec2-3-17-10-157.us-east-2.compute.amazonaws.com:3333/
 
@@ -21,6 +26,7 @@ Use case 1: Home Page redesign
       - This use case did not end up needing to make any changes to the database, only access information that was already retrieved from it.
 
 Use case 2:
+
     
     
 Use case 3:
