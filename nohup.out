@@ -280,3 +280,21 @@ Monitor both:  make monitor
 Restart and monitor: make dev
 Restart servers:  make dev-start 
 Stop servers:  make dev-stop 
+sending SIGTERM to node (Brunch) at PID 23253; bash: line 0: kill: (23253) - No such process
+sending SIGTERM to python (Gunicorn) at PID 23239; bash: line 0: kill: (23239) - No such process
+
+make: conda: Command not found
+make: conda: Command not found
+bash: /etc/profile.d/conda.sh: No such file or directory
+bash: conda: command not found
+bash: /etc/profile.d/conda.sh: No such file or directory
+bash: conda: command not found
+Server     Description       Log                   Monitoring                   PID                        
+------------------------------------------------------------------------------------------                 
+Frontend   Brunch            logs/frontend.log     make monitor-backend         23351 
+Backend    Augur/Gunicorn    logs/backend.log      make monitor-frontend        23337 
+
+Monitor both:  make monitor  
+Restart and monitor: make dev
+Restart servers:  make dev-start 
+Stop servers:  make dev-stop 

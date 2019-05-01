@@ -1422,6 +1422,18 @@ module.exports = {
         }).reverse();
       }
     },
+    search: function search() {
+      var searchItem = document.getElementById('searchSelect').value;
+      var searchedProjects = this.$data.projects;
+      document.getElementById("demo").innerHTML = searchedProjects;
+      var searchResult = [];
+      for (var i = 0; i < searchedProjects.length; i++) {
+        if (searchedProjects[i].indexOf(searchItem) >= '0') {
+          searchResult.push(searchedProjects[i]);
+        }
+      }
+      return searchResult;
+    },
     btoa: function btoa(s) {
       return window.btoa(s);
     }
@@ -1457,7 +1469,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"unmaterialized"},[_c('h3',[_vm._v("Downloaded Git Repos by Project")]),_vm._v(" "),_c('div',{staticClass:"sortForm"},[_vm._m(0),_vm._v(" "),_c('button',{on:{"click":_vm.sort}},[_vm._v("Sort")])]),_vm._v(" "),_c('div',{staticClass:"row section"},[_c('hr'),_vm._v(" "),_c('div',{staticClass:"col col-12 relative spinner loader",staticStyle:{"margin-left":"42.4%"}}),_vm._v(" "),_vm._l((_vm.projects),function(project){return _c('div',{staticClass:"col-6"},[_c('h4',{staticClass:"repoTitle"},[_vm._v(_vm._s(project))]),_vm._v(" "),_c('div',{staticClass:"repo-link-holder"},[_c('table',{staticClass:"is-responsive"},[_c('thead',{staticClass:"repo-link-table repo-link-table-body"},[_c('tr',[_c('th',[_vm._v("URL")]),_vm._v(" "),_c('th',[_vm._v("Status")]),_vm._v(" "),_c('th',[_vm._v("Number of repos: "+_vm._s(_vm.repos[project].length))])])]),_vm._v(" "),_c('tbody',{staticClass:"repo-link-table repo-link-table-body"},_vm._l((_vm.repos[project]),function(repo){return _c('tr',[_c('td',[_c('a',{attrs:{"href":"#"},on:{"click":function($event){_vm.onGitRepo(repo)}}},[_vm._v(_vm._s(repo.url))])]),_vm._v(" "),_c('td',[_vm._v(_vm._s(repo.status))]),_vm._v(" "),_c('td')])}))])])])})],2)])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"unmaterialized"},[_c('h3',[_vm._v("Downloaded Git Repos by Project")]),_vm._v(" "),_c('div',{staticClass:"sortForm"},[_vm._m(0),_vm._v(" "),_c('button',{on:{"click":_vm.sort}},[_vm._v("Sort")])]),_vm._v(" "),_c('div',{staticClass:"searchForm"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchData),expression:"searchData"}],attrs:{"id":"searchSelect","type":"text","placeholder":"GitHub Project name"},domProps:{"value":(_vm.searchData)},on:{"input":function($event){if($event.target.composing){ return; }_vm.searchData=$event.target.value}}}),_vm._v(" "),_c('button',{on:{"click":_vm.search}},[_vm._v("Search")]),_vm._v(" "),_c('p',{attrs:{"id":"demo"}})]),_vm._v(" "),_c('div',{staticClass:"row section"},[_c('hr'),_vm._v(" "),_c('div',{staticClass:"col col-12 relative spinner loader",staticStyle:{"margin-left":"42.4%"}}),_vm._v(" "),_vm._l((_vm.projects),function(project){return _c('div',{staticClass:"col-6"},[_c('h4',{staticClass:"repoTitle"},[_vm._v(_vm._s(project))]),_vm._v(" "),_c('div',{staticClass:"repo-link-holder"},[_c('table',{staticClass:"is-responsive"},[_c('thead',{staticClass:"repo-link-table repo-link-table-body"},[_c('tr',[_c('th',[_vm._v("URL")]),_vm._v(" "),_c('th',[_vm._v("Status")]),_vm._v(" "),_c('th',[_vm._v("Number of repos: "+_vm._s(_vm.repos[project].length))])])]),_vm._v(" "),_c('tbody',{staticClass:"repo-link-table repo-link-table-body"},_vm._l((_vm.repos[project]),function(repo){return _c('tr',[_c('td',[_c('a',{attrs:{"href":"#"},on:{"click":function($event){_vm.onGitRepo(repo)}}},[_vm._v(_vm._s(repo.url))])]),_vm._v(" "),_c('td',[_vm._v(_vm._s(repo.status))]),_vm._v(" "),_c('td')])}))])])])})],2)])}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('select',{attrs:{"id":"sortSelect"}},[_c('option',{attrs:{"value":"atoz"}},[_vm._v("A to Z")]),_vm._v(" "),_c('option',{attrs:{"value":"ztoa"}},[_vm._v("Z to A")]),_vm._v(" "),_c('option',{attrs:{"value":"totalcommits"}},[_vm._v("Total Commits")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
