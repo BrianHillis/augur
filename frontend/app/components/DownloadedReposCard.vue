@@ -22,6 +22,12 @@
 		<button @click="sort">Sort</button>
   </div>
 
+    <div class="searchForm">
+    <input id="searchSelect" type="text" v-model="searchData" placeholder="GitHub Project name">
+    <button @click="search">Search</button>
+   <p id="demo"></p>
+  </div>
+
   <!--<div id="example">
     <input type="text" v-model="searchData" placeholder="Please put your key word here">
     <ul>
@@ -124,6 +130,7 @@ module.exports = {
 
 	/*Add sort function to sort listed repos*/
 	sort() {
+		console.log(this.$store);
 		var selectList=document.getElementById('sortSelect');
 		var selectedOption=selectList.options[selectList.selectedIndex];
 		if(selectedOption.value=='atoz')
@@ -139,6 +146,20 @@ module.exports = {
 }).reverse();
 		}
 	},
+
+    search() {
+    var searchItem=document.getElementById('searchSelect').value;
+    var searchedProjects=this.$data.projects;
+    document.getElementById("demo").innerHTML = searchedProjects;
+    var searchResult=[];
+    for (var i=0; i< searchedProjects.length;i++){
+      if(searchedProjects[i].indexOf(searchItem)>='0'){
+        searchResult.push(searchedProjects[i]);
+      }
+    }
+    return searchResult;
+
+  },
 
     /* Add Search Function to parse the projects array and return projects contains key words 
     getSearchRe(){
