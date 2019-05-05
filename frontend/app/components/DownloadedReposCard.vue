@@ -12,6 +12,14 @@
   </div>
 -->
 
+  <!--Add search bar and"Search" button under search form-->
+  <div class="searchForm">
+    <input id="searchSelect" type="text" v-model="searchData" placeholder="GitHub Project name">
+    <button @click="search">Search</button>
+    <p id="demo"></p>
+  </div>
+
+  
   <!--Add sort dropdown and "Sort" button under search form-->
   <div class="sortForm">
   		<select id="sortSelect">
@@ -23,11 +31,7 @@
 		<button @click="sort">Sort</button>
   </div>
 
-    <div class="searchForm">
-    <input id="searchSelect" type="text" v-model="searchData" placeholder="GitHub Project name">
-    <button @click="search">Search</button>
-   <p id="demo"></p>
-  </div>
+
 
   <!--<div id="example">
     <input type="text" v-model="searchData" placeholder="Please put your key word here">
@@ -169,19 +173,28 @@ module.exports = {
 		}
 	},
 
-    search() {
+  search() {
+    
+    this.$data.projects = Object.keys(this.$data.repos)
     var searchItem=document.getElementById('searchSelect').value;
-    var searchedProjects=this.$data.projects;
-    document.getElementById("demo").innerHTML = searchedProjects;
-    var searchResult=[];
-    for (var i=0; i< searchedProjects.length;i++){
-      if(searchedProjects[i].indexOf(searchItem)>='0'){
-        searchResult.push(searchedProjects[i]);
-      }
+    var count=0;
+
+    for (var i=0; i< this.$data.projects.length;i++){
+      if(this.$data.projects[i].toLowerCase().indexOf(searchItem.toLowerCase())<0){
+         this.$data.projects.splice(i--,1); 
+         count=count+1; 
+        }
     }
-    return searchResult;
+    
+    /*
+    document.getElementById("demo").innerHTML = Object.keys(this.$data.repos).length;
+    if (event){
+      alert(Object.keys(this.$data.repos).length)
+    }
+    */
 
   },
+
 
     /* Add Search Function to parse the projects array and return projects contains key words 
     getSearchRe(){
