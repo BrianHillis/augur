@@ -17,7 +17,8 @@
   		<select id="sortSelect">
 		  <option value="atoz">A to Z</option>
 		  <option value="ztoa">Z to A</option>
-		  <option value="totalcommits">Total Commits</option>
+		  <option value="totalreposdown">Total Repos (greatest to least)</option>
+		  <option value="totalreposup">Total Repos (least to greatest)</option>
 		</select>
 		<button @click="sort">Sort</button>
   </div>
@@ -130,7 +131,6 @@ module.exports = {
 
 	/*Add sort function to sort listed repos*/
 	sort() {
-		console.log(this.$store);
 		var selectList=document.getElementById('sortSelect');
 		var selectedOption=selectList.options[selectList.selectedIndex];
 		if(selectedOption.value=='atoz')
@@ -144,6 +144,28 @@ module.exports = {
 			var sortedProjects=this.$data.projects.sort(function (a, b) {
     return a.toLowerCase().localeCompare(b.toLowerCase());
 }).reverse();
+		}
+		else if(selectedOption.value=='totalreposdown')
+		{
+			var reposToSort=this.repos;
+			var sortedProjects=this.$data.projects.sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+})
+			var sortedProjects=this.$data.projects.sort(function (a, b) {
+			console.log(reposToSort[a].length);
+    return reposToSort[b].length-reposToSort[a].length;
+    });
+		}
+		else if(selectedOption.value=='totalreposup')
+		{
+			var reposToSort=this.repos;
+			var sortedProjects=this.$data.projects.sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+})
+			var sortedProjects=this.$data.projects.sort(function (a, b) {
+			console.log(reposToSort[a].length);
+    return reposToSort[a].length-reposToSort[b].length;
+    });
 		}
 	},
 
