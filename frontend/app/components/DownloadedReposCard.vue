@@ -184,6 +184,7 @@ module.exports = {
          this.$data.projects.splice(i--,1); 
          count=count+1; 
         }
+        this.sort();
     }
     
     /*
