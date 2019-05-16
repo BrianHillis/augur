@@ -5,6 +5,8 @@ branch | status
 master | [![Build Status](https://travis-ci.org/chaoss/augur.svg?branch=master)](https://travis-ci.org/chaoss/augur)
    dev | [![Build Status](https://travis-ci.org/chaoss/augur.svg?branch=dev)](https://travis-ci.org/chaoss/augur)
 
+## [Our Live Instance](http://ec2-3-17-10-157.us-east-2.compute.amazonaws.com:3333/)
+
 ## About Augur
 
 Augur is focused on prototyping open source software metrics. 
